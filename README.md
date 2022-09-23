@@ -13,6 +13,11 @@ sudo apt-get install -y librxtx-java
 
 Before running the FlowControl.cfg file needs to be set to the path of the Arduino port. On linux (ubuntu) this is usually /dev/ttyACM0 or /dev/tty/ACM1. 
 
+Make sure that the permissions for /dev/tty/ACM0 allow for connection
+```
+chmod a+rw /dev/ttyACM0
+```
+
 To run from command line on linux. From the /dist folder
 ```
 java -Djava.library.path=/usr/lib/jni/ -jar FlowControl.jar
